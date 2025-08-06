@@ -8,5 +8,8 @@ jobs:
       - uses: actions/setup-python@v4
         with: 
           python-version: '3.12'
-      - run: pytest
+      - name: Install dependencies
+        run: pip install pytest
+      - name: Executing tests
+        run: pytest
       
